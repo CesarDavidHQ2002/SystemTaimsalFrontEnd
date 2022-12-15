@@ -18,7 +18,7 @@
                 <nav class="navbar navbar-light bg-light">
                     <div class="container">
                         <a class="navbar-brand" asp-action="Index">
-                            <img src="https://assets.new.siemens.com/siemens/assets/api/uuid:ceaeda0d0e5234906e374fe54f2dd60aebb59b1f/width:640/quality:high/placeholder.jpg" alt="" width="100" height="24">
+                            <img src="~/Img/Logo.png" alt="" width="200" height="100">
                         </a>
                     </div>
                 </nav>
@@ -32,7 +32,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Nosotros</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cesar" asp-action="Contact">Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cesar" asp-action="Index">Maquinaria</a>
@@ -44,14 +44,14 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cesar" asp-action="Portafolio">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cesar" asp-action="Contact">Contactanos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Contactanos</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -64,7 +64,7 @@
                     &copy; 2022 - TAIMSAL SA DE CV - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </div>
                 <div class="col-md-4 text-white">
-                    <a>¿Nesecitas informacion? +503 0000-0000</a>
+                    <a>¿Nesecitas informacion? +503 7745-7844</a>
                 </div>
                 <div class="col-md-4">
                     <i class="bi bi-facebook btn btn-primary"></i>
