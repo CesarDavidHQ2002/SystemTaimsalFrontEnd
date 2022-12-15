@@ -2,7 +2,7 @@
 
 namespace SystemTaimsalFrontEnd.Controllers
 {
-    public class CesarController : Controller
+    public class BlogController : Controller
     {
         public IActionResult Index()
         {
