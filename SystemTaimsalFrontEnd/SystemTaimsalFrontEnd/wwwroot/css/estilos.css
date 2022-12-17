@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 800px) {
     body {
-        padding: 40px 0;
+        padding: 20px 0;
     }
 
     .contenido-principal {
@@ -70,5 +70,4 @@
         .contenido-principal > * {
             width: 100%;
         }
-}
 }
