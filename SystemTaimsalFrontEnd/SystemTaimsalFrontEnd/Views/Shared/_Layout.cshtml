@@ -11,6 +11,7 @@
     @*-------------------------------------Links de carrusel------------------------------------*@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilocarrusel.css">
     @*------------------------------------------------------------------------------------------*@
 
 </head>
@@ -55,24 +56,50 @@
         </nav>
     </header>
     <div class="container-fluid">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-4">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted p-3" style="background-color:black">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-white">
-                    &copy; 2022 - TAIMSAL SA DE CV - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </div>
-                <div class="col-md-4 text-white">
-                    <a>¿Nesecitas informacion? +503 7745-7844</a>
-                </div>
-                <div class="col-md-4">
-                    <i class="bi bi-facebook btn btn-primary"></i>
-                </div>
-            </div>
+            <nav class="row">
+                <a href="#" class="col-3 text-reset text-uppercase d-flex align-items-center text-decoration-none text-secondary">
+                    <img src="~/Img/logofooter.png" alt="" class="m-2 w-25" />
+                    TAIMSAL SA de CV
+                </a>
+                <ul class="col-3 list-unstyled">
+                    <li class="text-uppercase">El Salvador</li>
+                    <li><a class="text-decoration-none text-secondary"> 4ª TYA. C. OTE. Y 6TA AV. SUR BLOCK A 1ª, Lourdes Colon la libertad</a></li>
+                </ul>
+                <ul class="col-3 list-unstyled">
+                    <li class="text-uppercase">¿Necesitas Mas Información?</li>
+                    <li><a class="text-decoration-none text-secondary">+503 7745-7844</a></li>
+                    <li><a class="text-decoration-none text-secondary">recursoshumanos@taimsal.sv</a></li>
+                    <li><a class="text-decoration-none text-secondary">ventas@taimsal.sv</a></li>
+                </ul>
+                <ul class="col-3 list-unstyled">
+                    <li class="text-uppercase">Social networks</li>
+                    <li class="d-flex justify-content-between">
+                        <a href="#" class="text-reset">
+                            <i class="bi bi-facebook"></i>
+                        </a>     
+                        <a href="#" class="text-reset">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>      
+                        <a href="#" class="text-reset">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-reset">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="col-xs-12 text-center m-4 text-decoration-none text-secondary">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Copyright</a>
+                    - All rights reserved &copy; 2022
+                </ul>
+            </nav>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
