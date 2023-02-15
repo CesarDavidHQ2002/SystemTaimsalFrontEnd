@@ -1,67 +1,51 @@
+
 .conten {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   min-width: calc(90% - 10px);
   overflow-x: hidden;
-  background-color: var(--clr);
- 
+  background-color: #fff;
 }
 
 section ul {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 section ul li {
+  position: relative;
   list-style: none;
-  text-align: center;
 }
 
 section ul li a {
-  color: #514e59;
-  text-decoration: none;
+  position: relative;
   font-size: 4em;
-  display: inline-flex;
-  font-weight: 300;
-  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-decoration-color: none;
+  line-height: 1em;
+  letter-spacing: 2px;
   text-transform: uppercase;
-}
-
-section ul li:hover a {
-  background-color: #514e59;
-  padding: 10px;
-  text-align: center;
-  color: var(--clr);
-}
-section ul:hover > li:not(:hover) {
-  opacity: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(8,8,37,0.8);
 }
 
 section ul li a::before {
-  content: "";
+  content: attr(data-text);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size:  calc(4em + 1vw);
-  opacity: 0;
-  color: #fff;
-  z-index: -1;
-  text-transform: initial;
-  letter-spacing: 500px;
-  transition: letter-spacing 0.5s;
+  color: #222831;
+  width: 0;
+  overflow: hidden;
+  transition: 1.5s;
+  border-right: 8px solid #222831;
 }
 
-section ul li a:hover::before {
-  opacity: 1;
-  content: attr(data-text);
-  background: var(--clr);
-  height: 250vh;
-  letter-spacing: 0;
+section ul li a:hover::before{
+  width: 100%;
+  -webkit-text-stroke: 1px #222831;
 }
