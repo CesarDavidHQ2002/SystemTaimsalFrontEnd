@@ -1,7 +1,8 @@
 
 .conten {
-  margin: 0;
-  padding: 0;
+  margin: 50px 0px;
+  padding: 0 0 0 60px;
+
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -27,25 +28,64 @@ section ul li a {
   position: relative;
   font-size: 4em;
   text-decoration: none;
-  text-decoration-color: none;
   line-height: 1em;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(8,8,37,0.8);
+  -webkit-text-stroke: 1px #033459;
+}
+section ul h1{
+  position: relative;
+  font-size: 6em;
+  text-decoration: none;
+  line-height: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+section ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  color: var(--clr);
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 8px solid var(--clr);
+}
+
+section ul li a:hover::before{
+  -webkit-text-stroke: 1px var(--clr);
+  width: 100%;
+  filter: drop-shadow(0 0 3px var(--clr));
+}
+
+@media screen and (max-width:375px){
+  
+section ul li a {
+  position: relative;
+  font-size: 2em;
+  text-decoration: none;
+  line-height: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #033459;
 }
 
 section ul li a::before {
   content: attr(data-text);
   position: absolute;
-  color: #222831;
+  color: var(--clr);
   width: 0;
   overflow: hidden;
-  transition: 1.5s;
-  border-right: 8px solid #222831;
+  transition: 1s;
+  border-right: 4px solid var(--clr);
 }
-
-section ul li a:hover::before{
-  width: 100%;
-  -webkit-text-stroke: 1px #222831;
+section ul h1{
+  position: relative;
+  font-size: 3em;
+  text-decoration: none;
+  line-height: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 }
