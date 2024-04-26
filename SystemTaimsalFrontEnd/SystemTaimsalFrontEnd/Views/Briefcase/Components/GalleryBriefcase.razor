@@ -1,0 +1,16 @@
+@page "/Portafolio"
+@using System.IO
+@using System.Linq
+
+@foreach (var imagePath in Directory.GetFiles("wwwroot/ImgBlog", "*.*").Where(file => 
+            Path.GetExtension(file) == ".png" ||
+            Path.GetExtension(file) == ".jpg" ||
+            Path.GetExtension(file) == ".jpeg" ||
+            Path.GetExtension(file) == ".gif"))
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@($"/ImgBlog/{Path.GetFileName(imagePath)}")" class="card-img-top" alt="@Path.GetFileName(imagePath)">
+                </div>
+            </div>
+        }

@@ -1,0 +1,14 @@
+@page "/"
+@using System.IO
+@using System.Linq
+
+@foreach (var imagePath in Directory.GetFiles("wwwroot/ImgBlog", "*.*").Where(file => 
+    Path.GetExtension(file) == ".png" ||
+    Path.GetExtension(file) == ".jpg" ||
+    Path.GetExtension(file) == ".jpeg" ||
+    Path.GetExtension(file) == ".gif"))
+{
+    <div class="carousel__elemento">
+        <img src="@($"/ImgBlog/{Path.GetFileName(imagePath)}")" alt="@Path.GetFileName(imagePath)" width="400px" height="400px">
+    </div>
+}

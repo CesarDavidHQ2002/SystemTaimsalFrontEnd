@@ -17,14 +17,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-ligh border-bottom box-shadow mb-1">
-            <div class="container-fluid">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-ligh border-bottom box-shadow mb-1">
                 <nav class="navbar">
-                    <div class="container">
-                        <a class="navbar-brand" asp-action="Index">
-                            <img src="~/Img/LogoLayout.png" alt="" width="50" height="50">
-                        </a>
-                    </div>
+                    <a class="navbar-brand" asp-action="Index">
+                        <img src="~/Img/LogoLayout.png" alt="" width="50" height="50">
+                    </a>
                 </nav>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +39,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Machine" asp-action="Index">Maquinaria</a>
                         </li>
+                        @*
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Jobs" asp-action="Index">Cotizacion</a>
                         </li>
+                        *@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Briefcase" asp-action="Index">Portafolio</a>
                         </li>
@@ -52,8 +52,8 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     <div class="container-fluid">
         <main role="main" >
